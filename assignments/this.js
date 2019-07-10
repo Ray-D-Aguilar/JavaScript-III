@@ -53,5 +53,7 @@ tiah.speak();
 // code example for New Binding
 
 // Principle 4
+
+ray.speak.call(tiah);
  
 // code example for Explicit Binding
