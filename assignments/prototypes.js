@@ -54,6 +54,7 @@ function Humanoid(humaniodAttr) {
 
 }
 
+//prototype Method for greet
 Humanoid.prototype.greet = function () {
   `${this.name} offers a greeting in ${this.language}`
 }
