@@ -11,7 +11,7 @@
         EXPLICIT BINDING
 * 3. Explicit Binding: This is defined when the call or apply method is used.
         
-NEW BINDING
+        NEW BINDING
 * 4. New Binding: when a constructor function is used, you use the "new" keyword to 
 implement and apply your newly created properties to a "this"/object.
 *
