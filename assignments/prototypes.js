@@ -27,14 +27,15 @@
 //Constructor function for CharacterStats
 function CharacterStats(CharAttr) {
   this.healthPoints = CharAttr.healthPoints;
-  this.name = CharAttr.name;
   GameObject.call(this, CharAttr); //Binding this to GameObject
-}
 
-//prototype method for TakeDamage
+  //prototype method for TakeDamage
 CharacterStats.prototype.takeDamage = function () {
   return `${this.name} took damage`;
+};
 }
+
+
 
 // Letting CharacterStats know about GameObject
 CharacterStats.prototype = Object.create(GameObject.prototype);
@@ -52,12 +53,14 @@ function Humanoid(humaniodAttr) {
   this.language = humaniodAttr.language;  
   CharacterStats.call(this, humaniodAttr);//Binding this to CharacterStats
 
+  Humanoid.prototype.greet = function() {
+    return `${this.name} offers a greeting in ${this.language}`; 
+  }
+
 }
 
 //prototype Method for greet
-Humanoid.prototype.greet = function () {
-  `${this.name} offers a greeting in ${this.language}`
-}
+
 
 //Letting Humanoid know about CharacterStats
 Humanoid.prototype = Object.create(CharacterStats.prototype);
