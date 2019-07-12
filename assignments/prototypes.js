@@ -28,7 +28,7 @@
 function CharacterStats(CharAttr) {
   this.healthPoints = CharAttr.healthPoints;
   this.name = CharAttr.name;
-  GameObject.call(this, CharAttr);
+  GameObject.call(this, CharAttr); //Binding this to GameObject
 }
 
 //prototype method for TakeDamage
@@ -49,8 +49,13 @@ CharacterStats.prototype = Object.create(GameObject.prototype);
 function Humanoid(humaniodAttr) {
   this.team = humaniodAttr.team;
   this.weapons = humaniodAttr.weapons;
-  this.language = humaniodAttr.language;
+  this.language = humaniodAttr.language;  
+  CharacterStats.call(this, humaniodAttr);//Binding this to CharacterStats
 
+}
+
+Humanoid.prototype.greet = function () {
+  `${this.name} offers a greeting in ${this.language}`
 }
 
 //Letting Humanoid know about CharacterStats
