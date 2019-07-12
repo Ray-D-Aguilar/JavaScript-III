@@ -27,10 +27,12 @@
 function CharacterStats(CharAttr) {
   this.healthPoints = CharAttr.healthPoints;
   this.name = CharAttr.name;
-
+  GameObject.call(this, CharAttr);
 }
 
 CharacterStats.prototype = Object.create(GameObject.prototype);
+
+CharacterStats.prototype.destroy;
 
 /*
   === CharacterStats ===
