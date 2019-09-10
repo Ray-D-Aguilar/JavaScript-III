@@ -12,10 +12,20 @@
 // Principle 1
 
 // code example for Window Binding
+console.log(this);
 
 // Principle 2
 
 // code example for Implicit Binding
+const me = {
+    name: 'Ray',
+    age: 23,
+    sayGreeting: function(greeting) {
+        console.log(`${greeting} My name is ${this.name}. I'm ${this.age} years old.`);
+        console.log(this);
+    }
+};
+me.sayGreeting("Hello! ");
 
 // Principle 3
 
