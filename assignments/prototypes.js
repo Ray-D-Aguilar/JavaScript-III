@@ -30,10 +30,10 @@ function CharacterStats(CharAttr) {
   GameObject.call(this, CharAttr); //Binding this to GameObject
 
   //prototype method for TakeDamage
-CharacterStats.prototype.takeDamage = function () {
+  CharacterStats.prototype.takeDamage = function () {
   return `${this.name} took damage`;
+  }
 };
-}
 
 
 
